@@ -1,0 +1,226 @@
+namespace = starfinder
+
+#open menu
+
+country_event = {
+	id = starfinder.1   
+	title = "starfinder.1.name"
+	desc = "starfinder.1.desc"
+	picture = GFX_evt_colony_settlement
+	is_triggered_only = yes
+
+	immediate = {
+		begin_event_chain = {
+			event_chain = "starfinder_chain"
+			target = ROOT
+		}
+	}
+
+	option = {
+		name = "starfinder.1.option.blackhole"
+		hidden_effect = {
+			remove_point_of_interest = starfinder_black_hole_poi
+			if = {
+				limit = {
+					NOT = {
+						any_system = {
+							is_star_class = sc_black_hole
+							NOT = { has_star_flag = starfinder_bh_visited }
+						}
+					}
+				}
+				every_system = {
+					limit = { 
+						is_star_class = sc_black_hole
+					}
+					remove_star_flag = starfinder_bh_visited
+				}
+			}
+
+			random_system = {
+				limit = { 
+					is_star_class = sc_black_hole
+					NOT = { has_star_flag = starfinder_bh_visited }
+				}
+				root = {
+					create_point_of_interest = {
+						id = starfinder_black_hole_poi
+						name = "starfinder_black_hole_poi"
+						desc = "starfinder_black_hole_poi_desc"
+						event_chain = "starfinder_chain"
+						category = starfinder_black_hole_cat
+						location = prev
+					}
+				}
+				set_star_flag = starfinder_bh_visited
+			}
+		}
+	}
+	option = {
+		name = "starfinder.1.option.pulsar"
+		hidden_effect = {
+			remove_point_of_interest = starfinder_pulsar_poi
+			if = {
+				limit = {
+					NOT = {
+						any_system = {
+							is_star_class = sc_pulsar
+							NOT = { has_star_flag = starfinder_pulsar_visited }
+						}
+					}
+				}
+				every_system = {
+					limit = { 
+						is_star_class = sc_pulsar
+					}
+					remove_star_flag = starfinder_pulsar_visited
+				}
+			}
+
+			random_system = {
+				limit = { 
+					is_star_class = sc_pulsar
+					NOT = { has_star_flag = starfinder_pulsar_visited }
+				}
+				root = {
+					create_point_of_interest = {
+						id = starfinder_pulsar_poi
+						name = "starfinder_pulsar_poi"
+						desc = "starfinder_pulsar_poi_desc"
+						event_chain = "starfinder_chain"
+						category = starfinder_pulsar_cat
+						location = prev
+					}
+				}
+				set_star_flag = starfinder_pulsar_visited
+			}
+		}
+	}
+
+	option = {
+		name = "starfinder.1.option.neutron"
+		hidden_effect = {
+			remove_point_of_interest = starfinder_neutron_poi
+			if = {
+				limit = {
+					NOT = {
+						any_system = {
+							is_star_class = sc_neutron_star
+							NOT = { has_star_flag = starfinder_neutron_visited }
+						}
+					}
+				}
+				every_system = {
+					limit = { 
+						is_star_class = sc_neutron_star
+					}
+					remove_star_flag = starfinder_neutron_visited
+				}
+			}
+
+			random_system = {
+				limit = { 
+					is_star_class = sc_neutron_star
+					NOT = { has_star_flag = starfinder_neutron_visited }
+				}
+				root = {
+					create_point_of_interest = {
+						id = starfinder_neutron_poi
+						name = "starfinder_neutron_poi"
+						desc = "starfinder_neutron_poi_desc"
+						event_chain = "starfinder_chain"
+						category = starfinder_neutron_cat
+						location = prev
+					}
+				}
+				set_star_flag = starfinder_neutron_visited
+			}
+		}
+	}
+
+	option = {
+		name = "starfinder.1.option.classa"
+		hidden_effect = {
+			remove_point_of_interest = starfinder_classa_poi
+			if = {
+				limit = {
+					NOT = {
+						any_system = {
+							is_star_class = sc_a
+							NOT = { has_star_flag = starfinder_classa_visited }
+						}
+					}
+				}
+				every_system = {
+					limit = { 
+						is_star_class = sc_a
+					}
+					remove_star_flag = starfinder_classa_visited
+				}
+			}
+
+			random_system = {
+				limit = { 
+					is_star_class = sc_a
+					NOT = { has_star_flag = starfinder_classa_visited }
+				}
+				root = {
+					create_point_of_interest = {
+						id = starfinder_classa_poi
+						name = "starfinder_classa_poi"
+						desc = "starfinder_classa_poi_desc"
+						event_chain = "starfinder_chain"
+						category = starfinder_classa_cat
+						location = prev
+					}
+				}
+				set_star_flag = starfinder_classa_visited
+			}
+		}
+	}
+
+	option = {
+		name = "starfinder.1.option.classb"
+		hidden_effect = {
+			remove_point_of_interest = starfinder_classb_poi
+			if = {
+				limit = {
+					NOT = {
+						any_system = {
+							is_star_class = sc_b
+							NOT = { has_star_flag = starfinder_classb_visited }
+						}
+					}
+				}
+				every_system = {
+					limit = { 
+						is_star_class = sc_b
+					}
+					remove_star_flag = starfinder_classb_visited
+				}
+			}
+
+			random_system = {
+				limit = { 
+					is_star_class = sc_b
+					NOT = { has_star_flag = starfinder_classb_visited }
+				}
+				root = {
+					create_point_of_interest = {
+						id = starfinder_classb_poi
+						name = "starfinder_classb_poi"
+						desc = "starfinder_classb_poi_desc"
+						event_chain = "starfinder_chain"
+						category = starfinder_classb_cat
+						location = prev
+					}
+				}
+				set_star_flag = starfinder_classb_visited
+			}
+		}
+	}
+
+	option = {
+		name = "starfinder.1.option.back"
+	}
+}

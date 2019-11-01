@@ -1,0 +1,21 @@
+starfinder_show_menu = {
+    length = 0
+    resources = {
+	    category = edicts
+		cost = {
+			influence = 0
+		}
+    }
+    
+    potential = {
+    }
+    
+	effect = {
+        custom_tooltip = edict_starfinder_show_menu_tooltip
+		country_event = { id = starfinder.1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

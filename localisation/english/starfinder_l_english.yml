@@ -1,0 +1,33 @@
+﻿l_english:
+    edict_starfinder_show_menu:0 "Star Type Finder Menu"
+    edict_starfinder_show_menu_desc:0 "Shows menu to search for star types"
+    edict_starfinder_show_menu_tooltip:0 "This event simply shows the menu"
+
+
+    starfinder_chain_title:0 "Locate Stars"
+    starfinder_chain_desc:0 "Location of a star of a specific type"
+
+    starfinder.1.name:0 "Locate Star Type"
+    starfinder.1.desc:0 "Select the type of star to find, it will produce a POI in the situation log.\n\nDue to limits on POIs it can only show 1 at a time per star type\n\nRepeatidly selecting an option will loop through all stars of that type"
+    
+    starfinder.1.option.blackhole:0 "Black Hole"
+    starfinder_black_hole_poi:0 "Black Hole"
+    starfinder_black_hole_poi_desc:0 "[Prev.GetName] is a Black Hole"
+
+    starfinder.1.option.pulsar:0 "Pulsar"
+    starfinder_pulsar_poi:0 "Pulsar"
+    starfinder_pulsar_poi_desc:0 "[Prev.GetName] is a Pulsar"
+
+    starfinder.1.option.neutron:0 "Neutron Star"
+    starfinder_neutron_poi:0 "Neutron Star"
+    starfinder_neutron_poi_desc:0 "[Prev.GetName] is a Neutron Star"
+
+    starfinder.1.option.classa:0 "Class A Star"
+    starfinder_classa_poi:0 "Class A Star"
+    starfinder_classa_poi_desc:0 "[Prev.GetName] is a Class A Star"
+
+    starfinder.1.option.classb:0 "Class B Star"
+    starfinder_classb_poi:0 "Class B Star"
+    starfinder_classb_poi_desc:0 "[Prev.GetName] is a Class B Star"
+
+    starfinder.1.option.back:0 "Close"
